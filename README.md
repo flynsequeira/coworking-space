@@ -1,11 +1,14 @@
-# AWS CodeBuild
-CodeBuild is a straightforward way to implemented *continuous integration (CI)* to automate Docker image builds. We will want to 
+# Simultaneous Containers Exercise
+This exercise demonstrates a very fundamental way of running multiple containers locally
 
-While CodeBuild is not the most popular build tool, its simplicity and accessibility is a great way to introduce CI processes. Learning how to use CodeBuild will provide a lot of redundant skills that are transferrable to other CI tools and platforms.
+You're provided with 3 directories that represents a microservice application. Each directory has code that has its own Dockerfile. Developers would be able to work on their code for their respective services and deploy their code independently of one another.
 
 ## Instructions
-1. Copy the starter code into a GitHub repository that you own. You may need to create a new GitHub repository.
-2. Set up an AWS CodeBuild pipeline that has access to pull from this GitHub repository.
-3. Create a new ECR repository for this project.
-4. Create a `buildspec.yml` file that builds and pushes a Docker image to ECR. Store it in the root of your GitHub repository.
-5. Run the build!
+Build each of these applications as Docker images. One at a time, run the containers for these applications until you have 3 active Docker containers running. 
+
+Make sure that the `starter` and `user` applications are running properly. You can query their `/health_check` endpoints with a GET request to verify.
+
+Provide a text response of up to 5 sentences describing your opinion about the process. In your response, make sure you address the following points:
+1. Do you think this is an efficient process?
+2. What are your thoughts about deploying multiple containers manually like this in a large organization with frequent deployments?
+3. Is the order in which you run the containers significant?

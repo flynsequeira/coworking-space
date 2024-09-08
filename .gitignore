@@ -1,7 +1,6 @@
 aws_creds.md
 // ignore all files in lesson folders
 lesson*/*
-project
-solution
-starter
 .DS_Store
+project/*
+starter/*
